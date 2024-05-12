@@ -14,7 +14,7 @@
 
 3. `gmssl_openssl_1.1_b2024_x64_1.tar.gz`：[GMSSL - 国密SSL实验室](https://www.gmssl.cn/gmssl/index.jsp)
 
-4. `qaxbrowser_1.1.45398.52.exe` : [下载奇安信可信浏览器国密开发者专版]([ (qianxin.com)](https://www.qianxin.com/ctp/gmbrowser.html))
+4. `qaxbrowser_1.1.45398.52.exe` : [下载奇安信可信浏览器国密开发者专版 (qianxin.com)](https://www.qianxin.com/ctp/gmbrowser.html)
 
 ### 3. 安装步骤
 
