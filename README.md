@@ -1,8 +1,8 @@
-# nginx 如何配置国密https
+# nginx 如何配置国密SSL
 
-### 1. 课程目的
+### 1. 目的
 
-配置国密https的网站，并通过支持国密SSL协议的浏览器访问。
+配置支持国密SSL协议的nginx，并通过支持国密协议的浏览器访问。
 
 ### 2. 准备
 
@@ -50,6 +50,7 @@ sudo apt install libpcre3 libpcre3-dev -y
 
 # 编译nginx
 ./configure  \
+--prefix=/home/ubuntu/soft/nginx \
 --without-http_gzip_module \
 --with-http_ssl_module \
 --with-http_stub_status_module \
@@ -61,7 +62,9 @@ sudo apt install libpcre3 libpcre3-dev -y
 make && make install
 ```
 
-3. 配置nginx
+3. 配置nginx 
+   1. conf目录下创建 `ssl.conf`配置文件
+   2. `nginx.conf`主配置文件引入`ssl.conf`
 
 ```nginx
 ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
@@ -71,5 +74,3 @@ ssl_verify_client off;
 ssl_certificate ca/sm2_site.pem;
 ssl_certificate_key ca/sm2_site.key;
 ```
-
-
